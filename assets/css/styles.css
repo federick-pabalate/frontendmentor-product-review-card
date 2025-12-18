@@ -40,8 +40,14 @@
   --font-family-montserrat-medium: "Montserrat-Medium", sans-serif;
   --font-family-montserrat-bold: "Montserrat-Bold", sans-serif;
   --font-family-fraunces: "Fraunces-Bold", serif;
-  --font-size-base: 16px;
-  --font-size-attribution: 0.75rem;
+
+  /* Typography Sizes */
+  --font-size-xs: 0.75rem;
+  --font-size-sm: 0.875rem;
+  --font-size-base: 1rem;
+  --font-size-md: 1.25rem;
+  --font-size-lg: 2rem;
+  --font-size-xl: 2.125rem;
 }
 
 body {
@@ -76,7 +82,7 @@ main {
 }
 
 .product__category {
-  font-size: 0.75rem;
+  font-size: var(--font-size-xs);
   letter-spacing: 4px;
   color: var(--font-color-grey);
   font-weight: 400;
@@ -84,13 +90,13 @@ main {
 }
 
 .product__name {
-  font-size: 2.125rem;
+  font-size: var(--font-size-xl);
   font-family: var(--font-family-fraunces);
   line-height: 100%;
 }
 
 .product__description {
-  font-size: 0.875rem;
+  font-size: var(--font-size-sm);
   font-family: var(--font-family-montserrat-medium);
   line-height: 180%;
   color: var(--font-color-grey);
@@ -102,13 +108,13 @@ main {
 }
 
 .product__discounted-price {
-  font-size: 2rem;
+  font-size: var(--font-size-lg);
   font-family: var(--font-family-fraunces);
   color: var(--primary-color);
 }
 
 .product__actual-price {
-  font-size: 0.875rem;
+  font-size: var(--font-size-sm);
   font-family: var(--font-family-montserrat-medium);
   text-decoration: line-through;
   color: var(--font-color-grey);
@@ -132,7 +138,7 @@ main {
   color: white;
   border: none;
   font-family: var(--font-family-montserrat-bold);
-  font-size: 0.875rem;
+  font-size: var(--font-size-sm);
   font-weight: 900;
   cursor: pointer;
 }
@@ -143,7 +149,7 @@ main {
 
 /** Attribution layout */
 .attribution {
-  font-size: var(--font-size-attribution);
+  font-size: var(--font-size-xs);
   text-align: center;
   padding: 20px;
 }
