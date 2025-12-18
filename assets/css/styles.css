@@ -10,7 +10,7 @@
 
 @font-face {
   font-display: swap;
-  font-family: "Montserrat-Medium";
+  font-family: "Montserrat-Bold";
   font-style: normal;
   font-weight: 700;
   src: url("../fonts/Montserrat/static/Montserrat-Bold.ttf") format("truetype");
@@ -41,6 +41,7 @@
   --font-family-montserrat-bold: "Montserrat-Bold", sans-serif;
   --font-family-fraunces: "Fraunces-Bold", serif;
   --font-size-base: 16px;
+  --font-size-attribution: 0.75rem;
 }
 
 body {
@@ -91,7 +92,7 @@ main {
 .product__description {
   font-size: 0.875rem;
   font-family: var(--font-family-montserrat-medium);
-  line-height: 1.5;
+  line-height: 180%;
   color: var(--font-color-grey);
 }
 
@@ -114,7 +115,7 @@ main {
   margin-left: 1rem;
 }
 
-.product__add-to-card-icon {
+.product__add-to-cart-icon {
   width: 16px;
   font-weight: 900;
   margin-right: 4px;
@@ -142,11 +143,29 @@ main {
 
 /** Attribution layout */
 .attribution {
-  font-size: var(--fs-attribution);
+  font-size: var(--font-size-attribution);
   text-align: center;
   padding: 20px;
 }
 
 .attribution a {
   color: hsl(228, 45%, 44%);
+}
+
+@media (min-width: 768px) {
+  .product__image-wrapper,
+  .product__content {
+    width: 50%;
+  }
+
+  .product__preview-card {
+    display: flex;
+    flex-direction: row;
+    width: 600px;
+  }
+
+  .product__image {
+    border-radius: 8px 0 0 8px;
+    height: 100%;
+  }
 }

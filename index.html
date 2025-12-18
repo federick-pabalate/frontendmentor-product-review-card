@@ -13,18 +13,52 @@
     />
 
     <title>Frontend Mentor | Product preview card component</title>
+    <link
+      rel="preload"
+      href="./assets/fonts/Montserrat/static/Montserrat-Medium.ttf"
+      as="font"
+      type="font/ttf"
+      crossorigin
+    />
+    <link
+      rel="preload"
+      href="./assets/fonts/Montserrat/static/Montserrat-Bold.ttf"
+      as="font"
+      type="font/ttf"
+      crossorigin
+    />
+    <link
+      rel="preload"
+      href="./assets/fonts/Fraunces/static/Fraunces_72pt-Regular.ttf"
+      as="font"
+      type="font/ttf"
+      crossorigin
+    />
     <link rel="stylesheet" href="./assets/css/styles.css" />
   </head>
   <body>
     <main>
       <div class="product__preview-card">
-        <img
-          class="product__image"
-          src="./assets/images/image-product-mobile.jpg"
-          alt="perfume-gabrielle-essence-eau-de-parfum.jpg"
-          width="300"
-          height="340"
-        />
+        <div class="product__image-wrapper">
+          <picture>
+            <source
+              media="(min-width:768px)"
+              srcset="./assets/images/image-product-desktop.jpg"
+            />
+            <source
+              media="(min-width:320px)"
+              srcset="./assets/images/image-product-mobile.jpg"
+            />
+            <img
+              class="product__image"
+              src="./assets/images/image-product-desktop.jpg"
+              alt="Flowers"
+              width="300"
+              height="300"
+            />
+          </picture>
+        </div>
+
         <div class="product__content">
           <h1 class="product__category">PERFUME</h1>
           <h2 class="product__name">Gabrielle Essence Eau De Parfum</h2>
@@ -45,7 +79,7 @@
               viewBox="0 0 24 24"
               stroke-width="2.5"
               stroke="currentColor"
-              class="product__add-to-card-icon"
+              class="product__add-to-cart-icon"
             >
               <path
                 stroke-linecap="round"
